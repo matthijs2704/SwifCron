@@ -79,7 +79,7 @@ public struct SwifCron {
 //         guard let timeZone = TimeZone(secondsFromGMT: 0) else {
 //             throw SwifCronError(reason: "Unable to get UTC+0 time zone")
 //         }
-//         calendar.timeZone = timeZone
+        calendar.timeZone = TimeZone.current
         
         // Value for `from` date
         let currentMinute = calendar.component(.minute, from: date)
